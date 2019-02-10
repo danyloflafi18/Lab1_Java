@@ -1,0 +1,14 @@
+public class Main {
+
+    public static void main(String[] args) {
+        WaterPump waterPump1 = new WaterPump();
+        WaterPump waterPump2 = new WaterPump(12, "Spain", 20, 40);
+        waterPump2.printNumberOfWaterPumpsSold();
+        WaterPump waterPump3 = new WaterPump(20, "China", 10, 25, 11.7, "red", 4.2);
+        WaterPump.printStaticNumberOfWaterPumpsSold();
+        System.out.println(waterPump1.toString());
+        System.out.println(waterPump2.toString());
+        System.out.println(waterPump3.toString());
+
+    }
+}
