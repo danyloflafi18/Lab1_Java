@@ -1,0 +1,86 @@
+public class WaterPump {
+
+    public int power;
+    public String manufacturer;
+    public int value;
+
+    private int price;
+    private double weight;
+
+    private static int numberOfWaterPumpsSold = 0;
+
+    protected String colour;
+    protected double height;
+
+
+
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+
+
+    public WaterPump(){
+        numberOfWaterPumpsSold++;
+    }
+
+    public  WaterPump(int power, String manufacturer, int value,int price){
+        this.power = power;
+        this.manufacturer = manufacturer;
+        this.value = value;
+        this.price = price;
+    }
+
+    public WaterPump(int power, String manufacturer, int value, int price, double weight, String colour, double height){
+        this(power, manufacturer, value, price);
+        this.weight = weight;
+        this.colour = colour;
+        this.height = height;
+    }
+
+    public String toString() {
+        String info = "\nInformation about Water Pump:\n";
+        info += "Power: " + power + " W\n";
+        info += "Мanufacturer: " + manufacturer + "\n";
+        info += "Value: " + value + " L\n";
+        info += "Price: " + price + " $\n";
+        info += "Weight: " + weight + "\n";
+        info += "Colour: " + colour + " \n";
+        info += "Height: " + height;
+        return  info;
+    }
+
+    public static void printStaticNumberOfWaterPumpsSold() {
+        System.out.println(numberOfWaterPumpsSold + " water pumps sold.");
+    }
+
+    public void printNumberOfWaterPumpsSold​​(){
+        System.out.println(numberOfWaterPumpsSold + " water pumps sold.");
+    }
+
+
+    public void resetValues(int power, String manufacturer, int value,int price,double weight, String colour, double height){
+        this.power = power;
+        this.manufacturer = manufacturer;
+        this.value = value;
+        this.price = price;
+        this.weight = weight;
+        this.colour = colour;
+        this.height = height;
+    }
+
+}
+  
