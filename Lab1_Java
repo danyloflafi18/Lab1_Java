@@ -34,7 +34,6 @@ public class WaterPump {
 
 
     public WaterPump(){
-        numberOfWaterPumpsSold++;
     }
 
     public  WaterPump(int power, String manufacturer, int value,int price){
